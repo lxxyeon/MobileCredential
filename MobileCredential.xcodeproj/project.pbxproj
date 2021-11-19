@@ -16,6 +16,7 @@
 		68290F4C2736B39800F5086F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68290F4B2736B39800F5086F /* main.m */; };
 		68290F592736B64600F5086F /* BeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68290F582736B64600F5086F /* BeaconManager.m */; };
 		68290F5C2736B77B00F5086F /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68290F5B2736B77B00F5086F /* UserModel.m */; };
+		68DBE30C2747DBC400B5441F /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DBE30B2747DBC400B5441F /* DBManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		68290F5A2736B77B00F5086F /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		68290F5B2736B77B00F5086F /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		68290F5D2736BA0F00F5086F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		68DBE30A2747DBC400B5441F /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		68DBE30B2747DBC400B5441F /* DBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 			children = (
 				68290F572736B64600F5086F /* BeaconManager.h */,
 				68290F582736B64600F5086F /* BeaconManager.m */,
+				68DBE30A2747DBC400B5441F /* DBManager.h */,
+				68DBE30B2747DBC400B5441F /* DBManager.m */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68DBE30C2747DBC400B5441F /* DBManager.m in Sources */,
 				68290F412736B39700F5086F /* MainViewController.m in Sources */,
 				68290F3B2736B39700F5086F /* AppDelegate.m in Sources */,
 				68290F5C2736B77B00F5086F /* UserModel.m in Sources */,

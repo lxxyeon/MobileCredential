@@ -14,4 +14,8 @@
 //Model
 #import "UserModel.h"
 
+//Manager
+#import "DBManager.h"
+#import "BeaconManager.h"
+
 #endif /* PrefixHeader_pch */

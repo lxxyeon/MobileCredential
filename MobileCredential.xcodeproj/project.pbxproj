@@ -20,6 +20,8 @@
 		68DBE30C2747DBC400B5441F /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DBE30B2747DBC400B5441F /* DBManager.m */; };
 		68DBE30F2747DF2A00B5441F /* SeatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DBE30E2747DF2A00B5441F /* SeatModel.m */; };
 		68DBE312274B506C00B5441F /* NFCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DBE311274B506C00B5441F /* NFCManager.m */; };
+		68DBE382274B93B700B5441F /* NanumBarunGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68DBE381274B93B500B5441F /* NanumBarunGothic.ttf */; };
+		68DBE383274B93B900B5441F /* NanumBarunGothicBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68DBE380274B93B500B5441F /* NanumBarunGothicBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		68DBE30E2747DF2A00B5441F /* SeatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeatModel.m; sourceTree = "<group>"; };
 		68DBE310274B506C00B5441F /* NFCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NFCManager.h; sourceTree = "<group>"; };
 		68DBE311274B506C00B5441F /* NFCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NFCManager.m; sourceTree = "<group>"; };
+		68DBE380274B93B500B5441F /* NanumBarunGothicBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunGothicBold.ttf; sourceTree = "<group>"; };
+		68DBE381274B93B500B5441F /* NanumBarunGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunGothic.ttf; sourceTree = "<group>"; };
 		F18496601A1EBE755FD09FEB /* Pods_MobileCredential.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileCredential.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -116,6 +120,7 @@
 		68290F542736B5B900F5086F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				68DBE37F274B937C00B5441F /* Font */,
 				68290F422736B39700F5086F /* Main.storyboard */,
 				68290F472736B39800F5086F /* LaunchScreen.storyboard */,
 			);
@@ -148,6 +153,15 @@
 				68DBE311274B506C00B5441F /* NFCManager.m */,
 			);
 			name = Managers;
+			sourceTree = "<group>";
+		};
+		68DBE37F274B937C00B5441F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				68DBE381274B93B500B5441F /* NanumBarunGothic.ttf */,
+				68DBE380274B93B500B5441F /* NanumBarunGothicBold.ttf */,
+			);
+			name = Font;
 			sourceTree = "<group>";
 		};
 		8D12DFCF1E6C2D738D8DBA10 /* Pods */ = {
@@ -226,7 +240,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68DBE383274B93B900B5441F /* NanumBarunGothicBold.ttf in Resources */,
 				68290F492736B39800F5086F /* LaunchScreen.storyboard in Resources */,
+				68DBE382274B93B700B5441F /* NanumBarunGothic.ttf in Resources */,
 				68290F462736B39800F5086F /* Assets.xcassets in Resources */,
 				68290F442736B39700F5086F /* Main.storyboard in Resources */,
 			);

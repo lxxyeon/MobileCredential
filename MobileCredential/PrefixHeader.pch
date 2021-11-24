@@ -19,7 +19,7 @@
 #import "DBManager.h"
 //#import "FMDatabase.h"
 #import "BeaconManager.h"
-
+#import "UserDataManager.h"
 #import "NSData+Conversion.h"
 
 #endif /* PrefixHeader_pch */

@@ -19,6 +19,7 @@
 		68290F5C2736B77B00F5086F /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68290F5B2736B77B00F5086F /* UserModel.m */; };
 		68317D36274E5495001CDA7F /* AlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68317D35274E5495001CDA7F /* AlertManager.m */; };
 		68317D39274E54F3001CDA7F /* WindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68317D38274E54F3001CDA7F /* WindowManager.m */; };
+		68317D3C274E55B2001CDA7F /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68317D3B274E55B2001CDA7F /* UserDataManager.m */; };
 		68DBE30C2747DBC400B5441F /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DBE30B2747DBC400B5441F /* DBManager.m */; };
 		68DBE30F2747DF2A00B5441F /* SeatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DBE30E2747DF2A00B5441F /* SeatModel.m */; };
 		68DBE312274B506C00B5441F /* NFCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DBE311274B506C00B5441F /* NFCManager.m */; };
@@ -50,6 +51,8 @@
 		68317D35274E5495001CDA7F /* AlertManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertManager.m; sourceTree = "<group>"; };
 		68317D37274E54F3001CDA7F /* WindowManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WindowManager.h; sourceTree = "<group>"; };
 		68317D38274E54F3001CDA7F /* WindowManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WindowManager.m; sourceTree = "<group>"; };
+		68317D3A274E55B2001CDA7F /* UserDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDataManager.h; sourceTree = "<group>"; };
+		68317D3B274E55B2001CDA7F /* UserDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDataManager.m; sourceTree = "<group>"; };
 		68DBE30A2747DBC400B5441F /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		68DBE30B2747DBC400B5441F /* DBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		68DBE30D2747DF2A00B5441F /* SeatModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeatModel.h; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 				68DBE311274B506C00B5441F /* NFCManager.m */,
 				68317D37274E54F3001CDA7F /* WindowManager.h */,
 				68317D38274E54F3001CDA7F /* WindowManager.m */,
+				68317D3A274E55B2001CDA7F /* UserDataManager.h */,
+				68317D3B274E55B2001CDA7F /* UserDataManager.m */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68317D3C274E55B2001CDA7F /* UserDataManager.m in Sources */,
 				68317D39274E54F3001CDA7F /* WindowManager.m in Sources */,
 				68DBE30C2747DBC400B5441F /* DBManager.m in Sources */,
 				68290F412736B39700F5086F /* MainViewController.m in Sources */,

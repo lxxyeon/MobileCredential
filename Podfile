@@ -7,4 +7,5 @@ target 'MobileCredential' do
 
   # Pods for MobileCredential
   pod 'FMDB'
+  pod 'FSCalendar'
 end

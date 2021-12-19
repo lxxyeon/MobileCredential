@@ -23,6 +23,7 @@
 		68317D6C2754D790001CDA7F /* NSData+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 68317D6B2754D790001CDA7F /* NSData+Conversion.m */; };
 		68A3DB59276F79A800548335 /* HistoryTimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A3DB58276F79A800548335 /* HistoryTimelineView.swift */; };
 		68A3DB5B276F79F300548335 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A3DB5A276F79F300548335 /* TimeLineView.swift */; };
+		68A3DB5F276F7AB600548335 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A3DB5E276F7AB600548335 /* HistoryViewController.m */; };
 		68DBE30C2747DBC400B5441F /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DBE30B2747DBC400B5441F /* DBManager.m */; };
 		68DBE30F2747DF2A00B5441F /* SeatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DBE30E2747DF2A00B5441F /* SeatModel.m */; };
 		68DBE312274B506C00B5441F /* NFCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DBE311274B506C00B5441F /* NFCManager.m */; };
@@ -61,6 +62,8 @@
 		68A3DB57276F79A800548335 /* MobileCredential-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobileCredential-Bridging-Header.h"; sourceTree = "<group>"; };
 		68A3DB58276F79A800548335 /* HistoryTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTimelineView.swift; sourceTree = "<group>"; };
 		68A3DB5A276F79F300548335 /* TimeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
+		68A3DB5D276F7AB600548335 /* HistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		68A3DB5E276F7AB600548335 /* HistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		68DBE30A2747DBC400B5441F /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		68DBE30B2747DBC400B5441F /* DBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		68DBE30D2747DF2A00B5441F /* SeatModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeatModel.h; sourceTree = "<group>"; };
@@ -130,6 +133,7 @@
 		68290F532736B58E00F5086F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				68A3DB5C276F7A8700548335 /* HistoryVC */,
 				68A3DB56276F798100548335 /* TimelineView */,
 				68290F3F2736B39700F5086F /* MainViewController.h */,
 				68290F402736B39700F5086F /* MainViewController.m */,
@@ -197,6 +201,15 @@
 				68A3DB5A276F79F300548335 /* TimeLineView.swift */,
 			);
 			path = TimelineView;
+			sourceTree = "<group>";
+		};
+		68A3DB5C276F7A8700548335 /* HistoryVC */ = {
+			isa = PBXGroup;
+			children = (
+				68A3DB5D276F7AB600548335 /* HistoryViewController.h */,
+				68A3DB5E276F7AB600548335 /* HistoryViewController.m */,
+			);
+			path = HistoryVC;
 			sourceTree = "<group>";
 		};
 		68DBE37F274B937C00B5441F /* Font */ = {
@@ -345,6 +358,7 @@
 				68317D3C274E55B2001CDA7F /* UserDataManager.m in Sources */,
 				68317D39274E54F3001CDA7F /* WindowManager.m in Sources */,
 				68DBE30C2747DBC400B5441F /* DBManager.m in Sources */,
+				68A3DB5F276F7AB600548335 /* HistoryViewController.m in Sources */,
 				68290F412736B39700F5086F /* MainViewController.m in Sources */,
 				68A3DB5B276F79F300548335 /* TimeLineView.swift in Sources */,
 				68317D36274E5495001CDA7F /* AlertManager.m in Sources */,

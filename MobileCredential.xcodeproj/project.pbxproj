@@ -21,6 +21,8 @@
 		68317D39274E54F3001CDA7F /* WindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68317D38274E54F3001CDA7F /* WindowManager.m */; };
 		68317D3C274E55B2001CDA7F /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68317D3B274E55B2001CDA7F /* UserDataManager.m */; };
 		68317D6C2754D790001CDA7F /* NSData+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 68317D6B2754D790001CDA7F /* NSData+Conversion.m */; };
+		68A3DB59276F79A800548335 /* HistoryTimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A3DB58276F79A800548335 /* HistoryTimelineView.swift */; };
+		68A3DB5B276F79F300548335 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A3DB5A276F79F300548335 /* TimeLineView.swift */; };
 		68DBE30C2747DBC400B5441F /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DBE30B2747DBC400B5441F /* DBManager.m */; };
 		68DBE30F2747DF2A00B5441F /* SeatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DBE30E2747DF2A00B5441F /* SeatModel.m */; };
 		68DBE312274B506C00B5441F /* NFCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DBE311274B506C00B5441F /* NFCManager.m */; };
@@ -56,6 +58,9 @@
 		68317D3B274E55B2001CDA7F /* UserDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDataManager.m; sourceTree = "<group>"; };
 		68317D6A2754D790001CDA7F /* NSData+Conversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Conversion.h"; sourceTree = "<group>"; };
 		68317D6B2754D790001CDA7F /* NSData+Conversion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Conversion.m"; sourceTree = "<group>"; };
+		68A3DB57276F79A800548335 /* MobileCredential-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobileCredential-Bridging-Header.h"; sourceTree = "<group>"; };
+		68A3DB58276F79A800548335 /* HistoryTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTimelineView.swift; sourceTree = "<group>"; };
+		68A3DB5A276F79F300548335 /* TimeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
 		68DBE30A2747DBC400B5441F /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		68DBE30B2747DBC400B5441F /* DBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		68DBE30D2747DF2A00B5441F /* SeatModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeatModel.h; sourceTree = "<group>"; };
@@ -100,6 +105,7 @@
 		68290F382736B39700F5086F /* MobileCredential */ = {
 			isa = PBXGroup;
 			children = (
+				68A3DB57276F79A800548335 /* MobileCredential-Bridging-Header.h */,
 				68317D692754D762001CDA7F /* Extensions */,
 				68290F562736B5FF00F5086F /* Managers */,
 				68290F522736B55800F5086F /* Models */,
@@ -124,6 +130,7 @@
 		68290F532736B58E00F5086F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				68A3DB56276F798100548335 /* TimelineView */,
 				68290F3F2736B39700F5086F /* MainViewController.h */,
 				68290F402736B39700F5086F /* MainViewController.m */,
 			);
@@ -181,6 +188,15 @@
 				68317D6B2754D790001CDA7F /* NSData+Conversion.m */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		68A3DB56276F798100548335 /* TimelineView */ = {
+			isa = PBXGroup;
+			children = (
+				68A3DB58276F79A800548335 /* HistoryTimelineView.swift */,
+				68A3DB5A276F79F300548335 /* TimeLineView.swift */,
+			);
+			path = TimelineView;
 			sourceTree = "<group>";
 		};
 		68DBE37F274B937C00B5441F /* Font */ = {
@@ -242,6 +258,7 @@
 				TargetAttributes = {
 					68290F352736B39700F5086F = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -329,10 +346,12 @@
 				68317D39274E54F3001CDA7F /* WindowManager.m in Sources */,
 				68DBE30C2747DBC400B5441F /* DBManager.m in Sources */,
 				68290F412736B39700F5086F /* MainViewController.m in Sources */,
+				68A3DB5B276F79F300548335 /* TimeLineView.swift in Sources */,
 				68317D36274E5495001CDA7F /* AlertManager.m in Sources */,
 				68290F3B2736B39700F5086F /* AppDelegate.m in Sources */,
 				68290F5C2736B77B00F5086F /* UserModel.m in Sources */,
 				68DBE30F2747DF2A00B5441F /* SeatModel.m in Sources */,
+				68A3DB59276F79A800548335 /* HistoryTimelineView.swift in Sources */,
 				68DBE312274B506C00B5441F /* NFCManager.m in Sources */,
 				68317D6C2754D790001CDA7F /* NSData+Conversion.m in Sources */,
 				68290F4C2736B39800F5086F /* main.m in Sources */,
@@ -481,6 +500,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -502,6 +522,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = leeyeon2.MobileCredential;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MobileCredential/Controllers/TimelineView/MobileCredential-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -512,6 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -533,6 +557,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = leeyeon2.MobileCredential;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MobileCredential/Controllers/TimelineView/MobileCredential-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

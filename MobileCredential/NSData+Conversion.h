@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSData_Conversion : NSObject
+@interface NSData (Conversion) 
 
 #pragma mark - String Conversion
 - (NSString *)realTimeString;

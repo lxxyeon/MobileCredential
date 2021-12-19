@@ -7,7 +7,7 @@
 
 #import "NSData+Conversion.h"
 
-@implementation NSData_Conversion
+@implementation NSData (Conversion)
 
 - (NSString *)leftTimeString {
     NSString *leftTimeString;

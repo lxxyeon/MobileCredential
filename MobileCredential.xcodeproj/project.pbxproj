@@ -21,6 +21,8 @@
 		68317D39274E54F3001CDA7F /* WindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68317D38274E54F3001CDA7F /* WindowManager.m */; };
 		68317D3C274E55B2001CDA7F /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68317D3B274E55B2001CDA7F /* UserDataManager.m */; };
 		68317D6C2754D790001CDA7F /* NSData+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 68317D6B2754D790001CDA7F /* NSData+Conversion.m */; };
+		685157442789C680009DC21C /* TimelinePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685157432789C680009DC21C /* TimelinePoint.swift */; };
+		685157462789C6F0009DC21C /* HisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685157452789C6F0009DC21C /* HisTableViewCell.swift */; };
 		68A3DB59276F79A800548335 /* HistoryTimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A3DB58276F79A800548335 /* HistoryTimelineView.swift */; };
 		68A3DB5B276F79F300548335 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A3DB5A276F79F300548335 /* TimeLineView.swift */; };
 		68A3DB5F276F7AB600548335 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A3DB5E276F7AB600548335 /* HistoryViewController.m */; };
@@ -61,6 +63,8 @@
 		68317D3B274E55B2001CDA7F /* UserDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDataManager.m; sourceTree = "<group>"; };
 		68317D6A2754D790001CDA7F /* NSData+Conversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Conversion.h"; sourceTree = "<group>"; };
 		68317D6B2754D790001CDA7F /* NSData+Conversion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Conversion.m"; sourceTree = "<group>"; };
+		685157432789C680009DC21C /* TimelinePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelinePoint.swift; sourceTree = "<group>"; };
+		685157452789C6F0009DC21C /* HisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HisTableViewCell.swift; sourceTree = "<group>"; };
 		68A3DB57276F79A800548335 /* MobileCredential-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobileCredential-Bridging-Header.h"; sourceTree = "<group>"; };
 		68A3DB58276F79A800548335 /* HistoryTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTimelineView.swift; sourceTree = "<group>"; };
 		68A3DB5A276F79F300548335 /* TimeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 		68290F542736B5B900F5086F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				685157422789C65C009DC21C /* TimelineTableViewCell */,
 				68DBE37F274B937C00B5441F /* Font */,
 				68290F422736B39700F5086F /* Main.storyboard */,
 				68290F472736B39800F5086F /* LaunchScreen.storyboard */,
@@ -199,6 +204,15 @@
 				68317D6B2754D790001CDA7F /* NSData+Conversion.m */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		685157422789C65C009DC21C /* TimelineTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				685157432789C680009DC21C /* TimelinePoint.swift */,
+				685157452789C6F0009DC21C /* HisTableViewCell.swift */,
+			);
+			name = TimelineTableViewCell;
 			sourceTree = "<group>";
 		};
 		68A3DB56276F798100548335 /* TimelineView */ = {
@@ -377,6 +391,7 @@
 				68ADC849277221FB0077BFAE /* EmployeeTableViewCell.m in Sources */,
 				68317D39274E54F3001CDA7F /* WindowManager.m in Sources */,
 				68ADC846277221990077BFAE /* EmployeeViewController.m in Sources */,
+				685157442789C680009DC21C /* TimelinePoint.swift in Sources */,
 				68DBE30C2747DBC400B5441F /* DBManager.m in Sources */,
 				68A3DB5F276F7AB600548335 /* HistoryViewController.m in Sources */,
 				68290F412736B39700F5086F /* MainViewController.m in Sources */,
@@ -388,6 +403,7 @@
 				68A3DB59276F79A800548335 /* HistoryTimelineView.swift in Sources */,
 				68DBE312274B506C00B5441F /* NFCManager.m in Sources */,
 				68317D6C2754D790001CDA7F /* NSData+Conversion.m in Sources */,
+				685157462789C6F0009DC21C /* HisTableViewCell.swift in Sources */,
 				68290F4C2736B39800F5086F /* main.m in Sources */,
 				68290F3E2736B39700F5086F /* SceneDelegate.m in Sources */,
 				68290F592736B64600F5086F /* BeaconManager.m in Sources */,

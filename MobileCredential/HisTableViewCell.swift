@@ -9,7 +9,6 @@ import UIKit
 
 open class HisTableViewCell: UITableViewCell {
     
- 
     @IBOutlet weak open var titleLabel: UILabel!
     @IBOutlet weak open var descriptionLabel: UILabel!
     @IBOutlet weak open var lineInfoLabel: UILabel!
@@ -28,12 +27,8 @@ open class HisTableViewCell: UITableViewCell {
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var seatLabel: UILabel!
     @IBOutlet weak var placeIcon: UIImageView!
-    
-    
-    
     @IBOutlet weak var hiddenView: UIView!
     @IBOutlet weak var hiddenViewconstraint: NSLayoutConstraint!
-    
     
     func settingData(isClicked :ExpandingTableViewCellContent )
         {

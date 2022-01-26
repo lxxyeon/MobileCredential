@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FJ7-Dl-a7G" customClass="TimeLineView" customModule="MLUP" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FJ7-Dl-a7G" customClass="TimeLineView" customModule="MobileCredential" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="238" width="414" height="624"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IXA-V6-0kf" customClass="Floaty" customModule="Floaty">

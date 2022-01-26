@@ -9,7 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HistoryViewController : UIViewController<FSCalendarDelegate, FSCalendarDataSource, UIGestureRecognizerDelegate>
+//@interface HistoryViewController : UIViewController<FSCalendarDelegate, FSCalendarDataSource, UIGestureRecognizerDelegate>
+@interface HistoryViewController : UIViewController
 
 @end
 

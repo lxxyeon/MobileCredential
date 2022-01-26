@@ -274,113 +274,113 @@
  */
 -(void)locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region
 {
-    if (state == CLRegionStateInside) {
-        NSLog(@"!!!!!!!!!!!CLRegionStateInside");
-        
-        
-        dbManager = [DBManager shared];
-        [dbManager openDB:DB_NAME];
-        
-        CLBeaconRegion *beaconRegion =(CLBeaconRegion *) region;
-        //        NSLog(@"%@", beaconRegion.UUID);
-        
-        if ([dbManager.fmDatabase open]) {
-            //1. uuid check
-            NSString *strSQLQueryToGetDataFromTable = [NSString stringWithFormat:@"SELECT * FROM WORKPLACE WHERE uuid = \"%@\" ",beaconRegion.UUID];
-            FMResultSet *fmResultSet = [dbManager.fmDatabase executeQuery: strSQLQueryToGetDataFromTable];
-            if (!fmResultSet) {
-                NSLog(@"%s: executeQuery failed: %@", __FUNCTION__, [dbManager.fmDatabase lastErrorMessage]);
-                return;
-            }
-            if ([fmResultSet next]) {
-                //2. minor check
-                NSString *strSQLQueryToGetDataFromTable2 = [NSString stringWithFormat:@"AND minorId= \"%@\"", beaconRegion.minor];
-                strSQLQueryToGetDataFromTable = [strSQLQueryToGetDataFromTable stringByAppendingString:strSQLQueryToGetDataFromTable2];
-                //                NSLog(@"%@",  strSQLQueryToGetDataFromTable);
-                
-                fmResultSet = [dbManager.fmDatabase executeQuery: strSQLQueryToGetDataFromTable];
-                
-                NSString *iBeacon1MinorValue = @"42668";
-                NSString *iBeacon2MinorValue = @"42704";
-                //                NSString *iBeacon3MinorValue = @"42719";
-                
-                NSString *minorStringValue = [beaconRegion.minor stringValue];
-                NSDateFormatter *today = [[NSDateFormatter alloc] init];
-                [today setDateFormat: @"yyyy-MM-dd"];
-                NSString *todayDate = [today stringFromDate: [NSDate date]];
-                //                NSLog(@"%@",todayDate);
-                NSDictionary* dict;
-                
-                
-                NSString *attendanceCheckInTimeString;
-                NSDate *attendanceCheckInTime = [NSDate date];
-                NSDateFormatter *dateFormat = [[[NSDateFormatter alloc] init] autorelease];
-                [dateFormat setDateFormat:@"HH:mm"];
-                [dateFormat setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"ko_KR"] autorelease]];
-                attendanceCheckInTimeString = [dateFormat stringFromDate: attendanceCheckInTime];
-                loginDt = [UserModel new];
-                [loginDt setWorkPlaceId: @"0"];
-                
-                
-                if ([minorStringValue isEqual: iBeacon1MinorValue]) {
-                    
-                    NSLog(@"장교");
-                    
-                    [self notiSender: 1];
-                    
-                    [loginDt setWorkPlaceId: @"1"];
-                    dict = [NSDictionary dictionaryWithObjectsAndKeys:
-                            @"date", todayDate,
-                            @"userKey", @"1",
-                            @"workPlaceId", @"1",
-                            @"attendanceCheckInTime", attendanceCheckInTimeString,
-                            @"attendanceCheckOutTime", @"00:00",
-                            nil];
-                    
-                }else if([minorStringValue isEqual: iBeacon2MinorValue]){
-                    NSLog(@"여의도");
-                    
-                    [self notiSender: 2];
-                    
-                    
-                    [loginDt setWorkPlaceId: @"2"];
-                    dict = [NSDictionary dictionaryWithObjectsAndKeys:
-                            @"date", todayDate,
-                            @"userKey", @"1",
-                            @"workPlaceId", @"2",
-                            @"attendanceCheckInTime", attendanceCheckInTimeString,
-                            @"attendanceCheckOutTime", @"00:00",
-                            nil];
-                    
-                }else {
-                    NSLog(@"신설");
-                    [self notiSender: 3];
-                    [loginDt setWorkPlaceId: @"3"];
-                    dict = [NSDictionary dictionaryWithObjectsAndKeys:
-                            @"date", todayDate,
-                            @"userKey", @"1",
-                            @"workPlaceId", @"3",
-                            @"attendanceCheckInTime", attendanceCheckInTimeString,
-                            @"attendanceCheckOutTime", @"00:00",
-                            nil];
-                }
-                [dbManager insertDataToDBTable:DB_TABLE_ATTENDANCE dict: dict];
-                
-                if (!fmResultSet) {
-                    NSLog(@"%s: executeQuery failed: %@", __FUNCTION__, [dbManager.fmDatabase lastErrorMessage]);
-                    return;
-                }
-            }else {
-            }
-            [dbManager.fmDatabase close];
-        }else {
-            NSLog(@"Unable to open Database");
-        }
-    }else if(state == CLRegionStateOutside){
-        //        NSLog(@"CLRegionStateOutside");
-    }else{
-        //        NSLog(@"CLRegionStateUnknown");
-    }
+//    if (state == CLRegionStateInside) {
+//        NSLog(@"!!!!!!!!!!!CLRegionStateInside");
+//        
+//        
+//        dbManager = [DBManager shared];
+//        [dbManager openDB:DB_NAME];
+//        
+//        CLBeaconRegion *beaconRegion =(CLBeaconRegion *) region;
+//        //        NSLog(@"%@", beaconRegion.UUID);
+//        
+//        if ([dbManager.fmDatabase open]) {
+//            //1. uuid check
+//            NSString *strSQLQueryToGetDataFromTable = [NSString stringWithFormat:@"SELECT * FROM WORKPLACE WHERE uuid = \"%@\" ",beaconRegion.UUID];
+//            FMResultSet *fmResultSet = [dbManager.fmDatabase executeQuery: strSQLQueryToGetDataFromTable];
+//            if (!fmResultSet) {
+//                NSLog(@"%s: executeQuery failed: %@", __FUNCTION__, [dbManager.fmDatabase lastErrorMessage]);
+//                return;
+//            }
+//            if ([fmResultSet next]) {
+//                //2. minor check
+//                NSString *strSQLQueryToGetDataFromTable2 = [NSString stringWithFormat:@"AND minorId= \"%@\"", beaconRegion.minor];
+//                strSQLQueryToGetDataFromTable = [strSQLQueryToGetDataFromTable stringByAppendingString:strSQLQueryToGetDataFromTable2];
+//                //                NSLog(@"%@",  strSQLQueryToGetDataFromTable);
+//                
+//                fmResultSet = [dbManager.fmDatabase executeQuery: strSQLQueryToGetDataFromTable];
+//                
+//                NSString *iBeacon1MinorValue = @"42668";
+//                NSString *iBeacon2MinorValue = @"42704";
+//                //                NSString *iBeacon3MinorValue = @"42719";
+//                
+//                NSString *minorStringValue = [beaconRegion.minor stringValue];
+//                NSDateFormatter *today = [[NSDateFormatter alloc] init];
+//                [today setDateFormat: @"yyyy-MM-dd"];
+//                NSString *todayDate = [today stringFromDate: [NSDate date]];
+//                //                NSLog(@"%@",todayDate);
+//                NSDictionary* dict;
+//                
+//                
+//                NSString *attendanceCheckInTimeString;
+//                NSDate *attendanceCheckInTime = [NSDate date];
+//                NSDateFormatter *dateFormat = [[[NSDateFormatter alloc] init] autorelease];
+//                [dateFormat setDateFormat:@"HH:mm"];
+//                [dateFormat setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"ko_KR"] autorelease]];
+//                attendanceCheckInTimeString = [dateFormat stringFromDate: attendanceCheckInTime];
+//                loginDt = [UserModel new];
+//                [loginDt setWorkPlaceId: @"0"];
+//                
+//                
+//                if ([minorStringValue isEqual: iBeacon1MinorValue]) {
+//                    
+//                    NSLog(@"장교");
+//                    
+//                    [self notiSender: 1];
+//                    
+//                    [loginDt setWorkPlaceId: @"1"];
+//                    dict = [NSDictionary dictionaryWithObjectsAndKeys:
+//                            @"date", todayDate,
+//                            @"userKey", @"1",
+//                            @"workPlaceId", @"1",
+//                            @"attendanceCheckInTime", attendanceCheckInTimeString,
+//                            @"attendanceCheckOutTime", @"00:00",
+//                            nil];
+//                    
+//                }else if([minorStringValue isEqual: iBeacon2MinorValue]){
+//                    NSLog(@"여의도");
+//                    
+//                    [self notiSender: 2];
+//                    
+//                    
+//                    [loginDt setWorkPlaceId: @"2"];
+//                    dict = [NSDictionary dictionaryWithObjectsAndKeys:
+//                            @"date", todayDate,
+//                            @"userKey", @"1",
+//                            @"workPlaceId", @"2",
+//                            @"attendanceCheckInTime", attendanceCheckInTimeString,
+//                            @"attendanceCheckOutTime", @"00:00",
+//                            nil];
+//                    
+//                }else {
+//                    NSLog(@"신설");
+//                    [self notiSender: 3];
+//                    [loginDt setWorkPlaceId: @"3"];
+//                    dict = [NSDictionary dictionaryWithObjectsAndKeys:
+//                            @"date", todayDate,
+//                            @"userKey", @"1",
+//                            @"workPlaceId", @"3",
+//                            @"attendanceCheckInTime", attendanceCheckInTimeString,
+//                            @"attendanceCheckOutTime", @"00:00",
+//                            nil];
+//                }
+//                [dbManager insertDataToDBTable:DB_TABLE_ATTENDANCE dict: dict];
+//                
+//                if (!fmResultSet) {
+//                    NSLog(@"%s: executeQuery failed: %@", __FUNCTION__, [dbManager.fmDatabase lastErrorMessage]);
+//                    return;
+//                }
+//            }else {
+//            }
+//            [dbManager.fmDatabase close];
+//        }else {
+//            NSLog(@"Unable to open Database");
+//        }
+//    }else if(state == CLRegionStateOutside){
+//        //        NSLog(@"CLRegionStateOutside");
+//    }else{
+//        //        NSLog(@"CLRegionStateUnknown");
+//    }
     //    NSLog(@"%@",workPlace);
 }
 

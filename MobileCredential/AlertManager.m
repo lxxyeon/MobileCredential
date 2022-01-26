@@ -24,21 +24,21 @@
 
 -(void)alertSignInMessage: (NSString*)str{
     //1.Alert - ID, Password 다 입력했는지 Check!
-    UIAlertController * alert =   [UIAlertController
-                                   alertControllerWithTitle:@"ERROR"
-                                   message:str
-                                   preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction* ok = [UIAlertAction
-                         actionWithTitle:@"OK"
-                         style:UIAlertActionStyleDefault
-                         handler:^(UIAlertAction * action)
-                         {
-        [alert dismissViewControllerAnimated:YES completion:nil];
-    }];
-    [alert addAction: ok];
-    //최상위 VC에 띄움
-    UIViewController *topVC = [WindowManager topVisibleViewController];
-    [topVC presentViewController: alert animated:YES completion:nil];
+//    UIAlertController * alert =   [UIAlertController
+//                                   alertControllerWithTitle:@"ERROR"
+//                                   message:str
+//                                   preferredStyle:UIAlertControllerStyleAlert];
+//    UIAlertAction* ok = [UIAlertAction
+//                         actionWithTitle:@"OK"
+//                         style:UIAlertActionStyleDefault
+//                         handler:^(UIAlertAction * action)
+//                         {
+//        [alert dismissViewControllerAnimated:YES completion:nil];
+//    }];
+//    [alert addAction: ok];
+//    //최상위 VC에 띄움
+//    UIViewController *topVC = [WindowManager topVisibleViewController];
+//    [topVC presentViewController: alert animated:YES completion:nil];
 }
 
 @end

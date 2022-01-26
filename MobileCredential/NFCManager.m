@@ -76,55 +76,55 @@
     
 }
 - (void)dataParsing{
-    [self fetchDataFromTable:DB_TABLE_SEAT];
-    loginDt = [UserDataManager sharedInstance].userVO;
-    seatDt = [UserDataManager sharedInstance].seatDt;
-    NSLog(@"%@", seatDt.NFCUID);
-    
-    dbManager = [DBManager shared];
-    [dbManager openDB:DB_NAME];
-    
-    
-    if ([dbManager.fmDatabase open]) {
-        //1. nfc 태그 확인
-        NSString *strSQLQueryToGetDataFromTable = [NSString stringWithFormat:@"SELECT * FROM SEATCHECKIN WHERE seatID = \"%@\" ", seatDt.seatId];
-        FMResultSet *fmResultSet = [dbManager.fmDatabase executeQuery: strSQLQueryToGetDataFromTable];
-        if (!fmResultSet) {
-            NSLog(@"%s: executeQuery failed: %@", __FUNCTION__, [dbManager.fmDatabase lastErrorMessage]);
-            return;
-            
-            if ([fmResultSet next]) {
-                //2. 체크인 여부 확인
-                NSString *strSQLQueryToGetDataFromTable2 = [NSString stringWithFormat:@"AND seatCheckIn= \"%@\"", @"NO"];
-                strSQLQueryToGetDataFromTable = [strSQLQueryToGetDataFromTable stringByAppendingString:strSQLQueryToGetDataFromTable2];
-                //                NSLog(@"%@",  strSQLQueryToGetDataFromTable);
-                fmResultSet = [dbManager.fmDatabase executeQuery: strSQLQueryToGetDataFromTable];
-                
-                if ([fmResultSet next]) {
-                    
-                    NSDateFormatter *today = [[NSDateFormatter alloc] init];
-                    [today setDateFormat: @"yyyy-MM-dd"];
-                    NSString *todayDate = [today stringFromDate: [NSDate date]];
-                    //        NSLog(@"%@", today);
-                    
-                    
-                    NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:
-                                          @"seatCheckInId", 1,
-                                          //                          @"date", @"2021-01-11",
-                                          @"date", todayDate,
-                                          @"seatCheckIn", @"YES",
-                                          //                          @"userKey", loginDt.userKey,
-                                          //                          @"seatId", seatDt.seatId ,
-                                          @"userKey", @"1",
-                                          @"seatId", @"1000" ,
-                                          nil];
-                    [dbManager insertDataToDBTable:DB_TABLE_SEATCHECKIN dict: dict];
-                }else{
-                    NSLog(@"이미 예약된 좌석");
-                }
-            }
-        }
-    }
+//    [self fetchDataFromTable:DB_TABLE_SEAT];
+//    loginDt = [UserDataManager sharedInstance].userVO;
+//    seatDt = [UserDataManager sharedInstance].seatDt;
+//    NSLog(@"%@", seatDt.NFCUID);
+//
+//    dbManager = [DBManager shared];
+//    [dbManager openDB:DB_NAME];
+//
+//
+//    if ([dbManager.fmDatabase open]) {
+//        //1. nfc 태그 확인
+//        NSString *strSQLQueryToGetDataFromTable = [NSString stringWithFormat:@"SELECT * FROM SEATCHECKIN WHERE seatID = \"%@\" ", seatDt.seatId];
+//        FMResultSet *fmResultSet = [dbManager.fmDatabase executeQuery: strSQLQueryToGetDataFromTable];
+//        if (!fmResultSet) {
+//            NSLog(@"%s: executeQuery failed: %@", __FUNCTION__, [dbManager.fmDatabase lastErrorMessage]);
+//            return;
+//
+//            if ([fmResultSet next]) {
+//                //2. 체크인 여부 확인
+//                NSString *strSQLQueryToGetDataFromTable2 = [NSString stringWithFormat:@"AND seatCheckIn= \"%@\"", @"NO"];
+//                strSQLQueryToGetDataFromTable = [strSQLQueryToGetDataFromTable stringByAppendingString:strSQLQueryToGetDataFromTable2];
+//                //                NSLog(@"%@",  strSQLQueryToGetDataFromTable);
+//                fmResultSet = [dbManager.fmDatabase executeQuery: strSQLQueryToGetDataFromTable];
+//
+//                if ([fmResultSet next]) {
+//
+//                    NSDateFormatter *today = [[NSDateFormatter alloc] init];
+//                    [today setDateFormat: @"yyyy-MM-dd"];
+//                    NSString *todayDate = [today stringFromDate: [NSDate date]];
+//                    //        NSLog(@"%@", today);
+//
+//
+//                    NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:
+//                                          @"seatCheckInId", 1,
+//                                          //                          @"date", @"2021-01-11",
+//                                          @"date", todayDate,
+//                                          @"seatCheckIn", @"YES",
+//                                          //                          @"userKey", loginDt.userKey,
+//                                          //                          @"seatId", seatDt.seatId ,
+//                                          @"userKey", @"1",
+//                                          @"seatId", @"1000" ,
+//                                          nil];
+//                    [dbManager insertDataToDBTable:DB_TABLE_SEATCHECKIN dict: dict];
+//                }else{
+//                    NSLog(@"이미 예약된 좌석");
+//                }
+//            }
+//        }
+//    }
 }
 
 /**

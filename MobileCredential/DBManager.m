@@ -53,18 +53,18 @@
 }
 
 -(void)openDB:(NSString *)strSQLiteDatabaseName {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *dbFilePath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:DB_NAME]];
-    //    NSLog(@"Database Filepath Delgate = %@", dbFilePath);
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    //    BOOL dbFileExists = [fileManager fileExistsAtPath:dbFilePath];
-    
-    NSString *bundledDbPath = [[NSBundle mainBundle] pathForResource:@"MLUP_DB" ofType:@"db"];
-    [fileManager copyItemAtPath:bundledDbPath toPath:dbFilePath error:nil];
-    //데이터베이스 연결
-    fmDatabase= [FMDatabase databaseWithPath:dbFilePath];
-    [fmDatabase setShouldCacheStatements:NO];
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *documentsDirectory = [paths objectAtIndex:0];
+//    NSString *dbFilePath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:DB_NAME]];
+//    //    NSLog(@"Database Filepath Delgate = %@", dbFilePath);
+//    NSFileManager *fileManager = [NSFileManager defaultManager];
+//    //    BOOL dbFileExists = [fileManager fileExistsAtPath:dbFilePath];
+//    
+//    NSString *bundledDbPath = [[NSBundle mainBundle] pathForResource:@"MLUP_DB" ofType:@"db"];
+//    [fileManager copyItemAtPath:bundledDbPath toPath:dbFilePath error:nil];
+//    //데이터베이스 연결
+//    fmDatabase= [FMDatabase databaseWithPath:dbFilePath];
+//    [fmDatabase setShouldCacheStatements:NO];
 }
 
 

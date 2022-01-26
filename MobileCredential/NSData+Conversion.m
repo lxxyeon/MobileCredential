@@ -22,7 +22,7 @@
     NSDate *realTime = [NSDate date];
     NSTimeZone *krTimeZone =[NSTimeZone timeZoneWithName:@"ko_KR"];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setTimeZone:krTimeZone];
+//    [dateFormatter setTimeZone:krTimeZone];
     NSString *dateString = [dateFormatter stringFromDate:realTime];
 
     
@@ -50,8 +50,8 @@
     NSString *todayString;
     NSDate *today = [NSDate date];
     NSDateFormatter *dateFormat = [[[NSDateFormatter alloc] init] autorelease];
-    [dateFormat setDateFormat:@"HH:mm"];
-    [dateFormat setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"ko_KR"] autorelease]];
+//    [dateFormat setDateFormat:@"HH:mm"];
+//    [dateFormat setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"ko_KR"] autorelease]];
    
     todayString = [dateFormat stringFromDate: today];
     
